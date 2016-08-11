@@ -44,10 +44,6 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 #undef max
 #endif
 
-#if ( defined(_WIN32) || defined(_WIN64) ) && !defined(snprintf)
-#define snprintf _snprintf
-#endif
-
 
 #if !defined(_WIN32) && !defined(_WIN64)
 extern "C"
@@ -64,6 +60,10 @@ extern "C"
 
 #if !defined(_WIN32) && !defined(_WIN64)
 }
+#endif
+
+#if ( defined(_WIN32) || defined(_WIN64) ) && !defined(snprintf)
+#define snprintf _snprintf
 #endif
 
 

@@ -41,7 +41,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 namespace testsuite
 {
-  _ABSTRACT class Test: virtual private Private::TestContainer
+  _ABSTRACT class Test: virtual public Private::TestContainer
   {
     friend class Private::TestContainer::StorableTest;
 
